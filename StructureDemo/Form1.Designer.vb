@@ -31,12 +31,15 @@ Partial Class Form1
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.btnListcustomer = New System.Windows.Forms.Button()
+        Me.lstCustomers = New System.Windows.Forms.ListBox()
+        Me.btnDeleteCustomer = New System.Windows.Forms.Button()
+        Me.btnLookup = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(12, 19)
+        Me.lblName.Location = New System.Drawing.Point(36, 184)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(35, 13)
         Me.lblName.TabIndex = 0
@@ -45,7 +48,7 @@ Partial Class Form1
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(12, 46)
+        Me.lblFirstName.Location = New System.Drawing.Point(36, 211)
         Me.lblFirstName.Name = "lblFirstName"
         Me.lblFirstName.Size = New System.Drawing.Size(57, 13)
         Me.lblFirstName.TabIndex = 1
@@ -54,7 +57,7 @@ Partial Class Form1
         'lblLastName
         '
         Me.lblLastName.AutoSize = True
-        Me.lblLastName.Location = New System.Drawing.Point(12, 72)
+        Me.lblLastName.Location = New System.Drawing.Point(36, 237)
         Me.lblLastName.Name = "lblLastName"
         Me.lblLastName.Size = New System.Drawing.Size(58, 13)
         Me.lblLastName.TabIndex = 2
@@ -63,7 +66,7 @@ Partial Class Form1
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(12, 98)
+        Me.lblEmail.Location = New System.Drawing.Point(36, 263)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(32, 13)
         Me.lblEmail.TabIndex = 3
@@ -71,46 +74,76 @@ Partial Class Form1
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(74, 16)
+        Me.txtName.Location = New System.Drawing.Point(98, 181)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(286, 20)
+        Me.txtName.Size = New System.Drawing.Size(376, 20)
         Me.txtName.TabIndex = 4
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(74, 43)
+        Me.txtFirstName.Location = New System.Drawing.Point(98, 208)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(286, 20)
+        Me.txtFirstName.Size = New System.Drawing.Size(376, 20)
         Me.txtFirstName.TabIndex = 5
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(74, 69)
+        Me.txtLastName.Location = New System.Drawing.Point(98, 234)
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(286, 20)
+        Me.txtLastName.Size = New System.Drawing.Size(376, 20)
         Me.txtLastName.TabIndex = 6
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(74, 95)
+        Me.txtEmail.Location = New System.Drawing.Point(98, 260)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(286, 20)
         Me.txtEmail.TabIndex = 7
         '
         'btnListcustomer
         '
-        Me.btnListcustomer.Location = New System.Drawing.Point(122, 128)
+        Me.btnListcustomer.Location = New System.Drawing.Point(156, 299)
         Me.btnListcustomer.Name = "btnListcustomer"
         Me.btnListcustomer.Size = New System.Drawing.Size(127, 23)
         Me.btnListcustomer.TabIndex = 8
         Me.btnListcustomer.Text = "List Customer"
         Me.btnListcustomer.UseVisualStyleBackColor = True
         '
+        'lstCustomers
+        '
+        Me.lstCustomers.FormattingEnabled = True
+        Me.lstCustomers.IntegralHeight = False
+        Me.lstCustomers.Location = New System.Drawing.Point(11, 12)
+        Me.lstCustomers.Name = "lstCustomers"
+        Me.lstCustomers.Size = New System.Drawing.Size(463, 147)
+        Me.lstCustomers.TabIndex = 9
+        '
+        'btnDeleteCustomer
+        '
+        Me.btnDeleteCustomer.Location = New System.Drawing.Point(305, 299)
+        Me.btnDeleteCustomer.Name = "btnDeleteCustomer"
+        Me.btnDeleteCustomer.Size = New System.Drawing.Size(75, 23)
+        Me.btnDeleteCustomer.TabIndex = 10
+        Me.btnDeleteCustomer.Text = "Delete Customer"
+        Me.btnDeleteCustomer.UseVisualStyleBackColor = True
+        '
+        'btnLookup
+        '
+        Me.btnLookup.Location = New System.Drawing.Point(391, 261)
+        Me.btnLookup.Name = "btnLookup"
+        Me.btnLookup.Size = New System.Drawing.Size(75, 23)
+        Me.btnLookup.TabIndex = 11
+        Me.btnLookup.Text = "Lookup"
+        Me.btnLookup.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(373, 163)
+        Me.ClientSize = New System.Drawing.Size(490, 334)
+        Me.Controls.Add(Me.btnLookup)
+        Me.Controls.Add(Me.btnDeleteCustomer)
+        Me.Controls.Add(Me.lstCustomers)
         Me.Controls.Add(Me.btnListcustomer)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtLastName)
@@ -136,4 +169,7 @@ Partial Class Form1
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents btnListcustomer As Button
+    Friend WithEvents lstCustomers As ListBox
+    Friend WithEvents btnDeleteCustomer As Button
+    Friend WithEvents btnLookup As Button
 End Class
